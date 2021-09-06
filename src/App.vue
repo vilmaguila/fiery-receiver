@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import Navigator from './components/Navigator.vue'
 
 let counter = ref(0)
 
@@ -9,6 +10,7 @@ setInterval(() => {
 </script>
 
 <template>
+  <Navigator />
   <div>
     <header class="bg-white shadow" v-if="$route.meta.title">
       <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
