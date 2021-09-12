@@ -1,14 +1,15 @@
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-import Track from './views/Track.vue'
-import NotFound from './views/NotFound.vue'
+import Home from "./views/Home.vue";
+import About from "./views/About.vue";
+import Track from "./views/Track.vue";
+import Login from './views/Login.vue';
+import NotFound from "./views/NotFound.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
-  { path: '/', component: Home, meta: { title: 'Home' } },
+  { path: "/", component: Home, meta: { title: "Home" } },
   {
-    path: '/about',
-    meta: { title: 'About' },
+    path: "/about",
+    meta: { title: "About" },
     component: About,
     // example of route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
@@ -16,7 +17,10 @@ export const routes = [
     // component: () => import('./views/About.vue')
   },
   {
-    path: '/track', meta: {title: 'Track'}, component: Track
+    path: "/track",
+    meta: { title: "Track" },
+    component: Track,
   },
-  { path: '/:path(.*)', component: NotFound },
-]
+  { path: "/login", meta: { title: "Login" }, component: Login },
+  { path: "/:path(.*)", component: NotFound },
+];
