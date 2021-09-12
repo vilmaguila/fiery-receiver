@@ -1,14 +1,15 @@
 <template>
-  <div>
-    <form action="submit">
-      <input type="text">
-      <button> Submit</button>
-    </form>
-  </div>
+  <h1>This is the login page</h1>
+  <the-login-form></the-login-form>
 </template>
 
 <script>
+import TheLoginForm from '../components/TheLoginForm.vue'
+
 export default {
+  components: {
+    TheLoginForm
+  },
   setup() {},
 };
 </script>
