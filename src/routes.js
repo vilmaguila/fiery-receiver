@@ -1,7 +1,7 @@
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Track from "./views/Track.vue";
-import Login from './views/Login.vue';
+import Auth from './views/Auth.vue';
 import NotFound from "./views/NotFound.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
@@ -21,6 +21,6 @@ export const routes = [
     meta: { title: "Track" },
     component: Track,
   },
-  { path: "/login", meta: { title: "Login" }, component: Login },
+  { path: "/auth", meta: { title: "Authentication" }, component: Auth },
   { path: "/:path(.*)", component: NotFound },
 ];

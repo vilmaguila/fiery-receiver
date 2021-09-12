@@ -1,14 +1,14 @@
 <template>
   <h1>This is the login page</h1>
-  <the-login-form></the-login-form>
+  <the-user-auth></the-user-auth>
 </template>
 
 <script>
-import TheLoginForm from '../components/TheLoginForm.vue'
+import TheUserAuth from '../components/TheUserAuth.vue'
 
 export default {
   components: {
-    TheLoginForm
+    TheUserAuth
   },
   setup() {},
 };
