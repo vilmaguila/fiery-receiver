@@ -28,6 +28,33 @@ export const authStore = defineStore("auth", {
 
       if (!response.ok) {
         const error = new Error(
+          responseData.message || "Failed to sign up"
+        );
+        throw error;
+      }
+      console.log(responseData);
+      this.$patch((state) => {
+        (state.userId = responseData.user), (state.token = responseData.jwt);
+      });
+    },
+    async login(username, password) {
+      const response = await fetch(
+        "http://localhost:1337/auth/local",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            identifier: username,
+            password: password,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const responseData = await response.json();
+
+      if (!response.ok) {
+        const error = new Error(
           responseData.message || "Failed to authenticate"
         );
         throw error;
