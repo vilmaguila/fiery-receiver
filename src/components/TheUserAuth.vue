@@ -36,18 +36,26 @@
 
 <script>
 import { ref, computed } from "vue";
+import { authStore } from "@/stores/auth";
+
 export default {
   setup() {
     const username = ref("");
     const password = ref("");
     const formisvalid = ref(true);
     const mode = ref("login");
+    const store = authStore();
 
     const submitForm = () => {
       formisvalid.value = true;
       if (username.value === "" || password.value.length < 6) {
         formisvalid.value = false;
         return;
+      }
+
+      if (mode.value === "login") {
+      } else {
+        store.signup(username.value, password.value);
       }
       username.value = "";
       password.value = "";
@@ -86,6 +94,7 @@ export default {
       password,
       loginButtonCaption,
       changeModeButtonCaption,
+      store,
     };
   },
 };
