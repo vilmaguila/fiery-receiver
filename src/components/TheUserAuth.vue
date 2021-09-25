@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="submitForm" class="space-y-2">
     <div class="bg-gray-400 rounded-md shadow-md p-2 w-72 text-center">
-      <label for="username"> Username </label>
+      <label for="username"> Username (email) </label>
       <input type="text" v-model.trim="username" />
     </div>
     <div class="bg-gray-400 rounded-md shadow-md p-2 w-72 text-center">
@@ -48,7 +48,11 @@ export default {
 
     const submitForm = () => {
       formisvalid.value = true;
-      if (username.value === "" || password.value.length < 6) {
+      if (
+        username.value === "" ||
+        password.value.length < 6 ||
+        !username.value.includes("@")
+      ) {
         formisvalid.value = false;
         return;
       }

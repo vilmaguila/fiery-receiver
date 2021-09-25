@@ -3,6 +3,8 @@ import { defineStore } from "pinia";
 export const authStore = defineStore("auth", {
   state: () => ({
     userId: null,
+    token: null,
+    tokenExpiration: null,
   }),
   // could also be defined as
   // state: () => ({ count: 0 })
@@ -15,7 +17,7 @@ export const authStore = defineStore("auth", {
           body: JSON.stringify({
             username: username,
             email: username,
-            password: "passwordDDDD",
+            password: password,
           }),
           headers: {
             "Content-Type": "application/json",
@@ -31,6 +33,9 @@ export const authStore = defineStore("auth", {
         throw error;
       }
       console.log(responseData);
+      this.$patch((state) => {
+        (state.userId = responseData.user), (state.token = responseData.jwt);
+      });
     },
   },
 });
