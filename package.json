@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "pinia": "next",
     "postcss": "^8.3.6",
     "vue": "^3.2.9",
     "vue-router": "^4.0.11"

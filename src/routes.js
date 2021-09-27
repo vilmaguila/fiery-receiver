@@ -1,7 +1,8 @@
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Track from "./views/Track.vue";
-import Login from './views/Login.vue';
+import Auth from './views/Auth.vue';
+import Profile from './views/Profile.vue';
 import NotFound from "./views/NotFound.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
@@ -18,9 +19,10 @@ export const routes = [
   },
   {
     path: "/track",
-    meta: { title: "Track" },
+    meta: { title: "Track", requiresAuth: true },
     component: Track,
   },
-  { path: "/login", meta: { title: "Login" }, component: Login },
+  { path: "/auth", meta: { title: "Authentication", requiresUnauth: true }, component: Auth },
+  { path: "/profile", meta: { title: "Profile", requiresAuth: true }, component: Profile },
   { path: "/:path(.*)", component: NotFound },
 ];

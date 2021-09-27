@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vitejs/plugin-vue", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:1.6.1"],
             ["@vue/compiler-sfc", "npm:3.2.9"],
             ["autoprefixer", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:10.3.4"],
+            ["pinia", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.0.0-rc.9"],
             ["postcss", "npm:8.3.6"],
             ["tailwindcss", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.2.9"],
             ["vite", "npm:2.5.3"],
@@ -431,6 +432,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@vue-devtools-api-npm-6.0.0-beta.15-5b4f541918-7769e72bd4.zip/node_modules/@vue/devtools-api/",
           "packageDependencies": [
             ["@vue/devtools-api", "npm:6.0.0-beta.15"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.0.0-beta.18", {
+          "packageLocation": "./.yarn/cache/@vue-devtools-api-npm-6.0.0-beta.18-eb4e814502-aa9e894a7a.zip/node_modules/@vue/devtools-api/",
+          "packageDependencies": [
+            ["@vue/devtools-api", "npm:6.0.0-beta.18"]
           ],
           "linkType": "HARD",
         }]
@@ -2444,6 +2452,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["pinia", [
+        ["npm:2.0.0-rc.9", {
+          "packageLocation": "./.yarn/cache/pinia-npm-2.0.0-rc.9-759edf8c03-f7bfe4ec55.zip/node_modules/pinia/",
+          "packageDependencies": [
+            ["pinia", "npm:2.0.0-rc.9"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.0.0-rc.9", {
+          "packageLocation": "./.yarn/__virtual__/pinia-virtual-598bcb8396/0/cache/pinia-npm-2.0.0-rc.9-759edf8c03-f7bfe4ec55.zip/node_modules/pinia/",
+          "packageDependencies": [
+            ["pinia", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.0.0-rc.9"],
+            ["@types/typescript", null],
+            ["@types/vue", null],
+            ["@types/vue__composition-api", null],
+            ["@vue/composition-api", null],
+            ["@vue/devtools-api", "npm:6.0.0-beta.18"],
+            ["typescript", null],
+            ["vue", "npm:3.2.9"],
+            ["vue-demi", "virtual:598bcb83965eefcf00ea7d38f474320431e7ea59409ffbf28cc7bf08b6fd9f632e8aec1730dc435144a3a6301aa4353f5c9938a2dbba87fda4b7bcb271449e9f#npm:0.11.4"]
+          ],
+          "packagePeers": [
+            "@types/typescript",
+            "@types/vue",
+            "@types/vue__composition-api",
+            "@vue/composition-api",
+            "typescript",
+            "vue"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["postcss", [
         ["npm:8.3.6", {
           "packageLocation": "./.yarn/cache/postcss-npm-8.3.6-e6c5350483-ff55b91bea.zip/node_modules/postcss/",
@@ -3226,6 +3266,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vitejs/plugin-vue", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:1.6.1"],
             ["@vue/compiler-sfc", "npm:3.2.9"],
             ["autoprefixer", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:10.3.4"],
+            ["pinia", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.0.0-rc.9"],
             ["postcss", "npm:8.3.6"],
             ["tailwindcss", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.2.9"],
             ["vite", "npm:2.5.3"],
@@ -3243,6 +3284,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vue/compiler-dom", "npm:3.2.9"],
             ["@vue/runtime-dom", "npm:3.2.9"],
             ["@vue/shared", "npm:3.2.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["vue-demi", [
+        ["npm:0.11.4", {
+          "packageLocation": "./.yarn/unplugged/vue-demi-virtual-19854ea3b3/node_modules/vue-demi/",
+          "packageDependencies": [
+            ["vue-demi", "npm:0.11.4"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:598bcb83965eefcf00ea7d38f474320431e7ea59409ffbf28cc7bf08b6fd9f632e8aec1730dc435144a3a6301aa4353f5c9938a2dbba87fda4b7bcb271449e9f#npm:0.11.4", {
+          "packageLocation": "./.yarn/unplugged/vue-demi-virtual-19854ea3b3/node_modules/vue-demi/",
+          "packageDependencies": [
+            ["vue-demi", "virtual:598bcb83965eefcf00ea7d38f474320431e7ea59409ffbf28cc7bf08b6fd9f632e8aec1730dc435144a3a6301aa4353f5c9938a2dbba87fda4b7bcb271449e9f#npm:0.11.4"],
+            ["@types/vue", null],
+            ["@types/vue__composition-api", null],
+            ["@vue/composition-api", null],
+            ["vue", "npm:3.2.9"]
+          ],
+          "packagePeers": [
+            "@types/vue",
+            "@types/vue__composition-api",
+            "@vue/composition-api",
+            "vue"
           ],
           "linkType": "HARD",
         }]
