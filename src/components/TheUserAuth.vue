@@ -58,7 +58,7 @@ export default {
       }
 
       if (mode.value === "login") {
-        store.login(username.value, password.value)
+        store.login(username.value, password.value);
       } else {
         store.signup(username.value, password.value);
       }
@@ -90,6 +90,10 @@ export default {
       }
     });
 
+    const isLoggedIn = computed(() => {
+      return store.isAuthenticated;
+    });
+
     return {
       submitForm,
       switchAuthMode,
@@ -99,6 +103,7 @@ export default {
       password,
       loginButtonCaption,
       changeModeButtonCaption,
+      isLoggedIn,
       store,
     };
   },

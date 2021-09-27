@@ -1,8 +1,40 @@
 <template>
   <div class="flex gap-2 justify-center p-2">
-    <router-link class="bg-gray-400 p-2 rounded-lg" to="/"> HOME </router-link>
-    <router-link class="bg-gray-400 p-2 rounded-lg" to="/about"> ABOUT</router-link>
-    <router-link class="bg-gray-400 p-2 rounded-lg" to="/track"> TRACK </router-link>
-    <router-link class="bg-gray-400 p-2 rounded-lg" to="/auth"> LOGIN </router-link>
+    <router-link class="bg-gray-400 p-2 rounded-lg" to="/"> Home </router-link>
+    <router-link class="bg-gray-400 p-2 rounded-lg" to="/about">
+      ABOUT</router-link
+    >
+    <router-link class="bg-gray-400 p-2 rounded-lg" to="/track">
+      TRACK
+    </router-link>
+    <router-link
+      v-if="!isLoggedIn"
+      class="bg-gray-400 p-2 rounded-lg"
+      to="/auth"
+    >
+      LOGIN
+    </router-link>
+    <router-link v-else class="bg-gray-400 p-2 rounded-lg" to="/profile">
+      PROFILE
+    </router-link>
   </div>
 </template>
+
+<script>
+import { computed } from "vue";
+import { authStore } from "../stores/auth";
+export default {
+  setup() {
+    const store = authStore();
+
+    const isLoggedIn = computed(() => {
+      return store.isAuthenticated;
+    });
+
+    return {
+      store,
+      isLoggedIn,
+    };
+  },
+};
+</script>

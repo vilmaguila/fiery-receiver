@@ -6,6 +6,17 @@ export const authStore = defineStore("auth", {
     token: null,
     tokenExpiration: null,
   }),
+  getters: {
+    getToken: (state) => {
+      return state.token;
+    },
+    getUserId: (state) => {
+      return state.userId;
+    },
+    isAuthenticated: (state) => {
+      return !!state.token;
+    },
+  },
   // could also be defined as
   // state: () => ({ count: 0 })
   actions: {
@@ -27,9 +38,7 @@ export const authStore = defineStore("auth", {
       const responseData = await response.json();
 
       if (!response.ok) {
-        const error = new Error(
-          responseData.message || "Failed to sign up"
-        );
+        const error = new Error(responseData.message || "Failed to sign up");
         throw error;
       }
       console.log(responseData);
@@ -38,19 +47,16 @@ export const authStore = defineStore("auth", {
       });
     },
     async login(username, password) {
-      const response = await fetch(
-        "http://localhost:1337/auth/local",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            identifier: username,
-            password: password,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch("http://localhost:1337/auth/local", {
+        method: "POST",
+        body: JSON.stringify({
+          identifier: username,
+          password: password,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       const responseData = await response.json();
 
       if (!response.ok) {
