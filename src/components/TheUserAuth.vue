@@ -37,6 +37,7 @@
 <script>
 import { ref, computed } from "vue";
 import { authStore } from "@/stores/auth";
+import { useRouter, useRoute } from 'vue-router'
 
 export default {
   setup() {
@@ -45,6 +46,7 @@ export default {
     const formisvalid = ref(true);
     const mode = ref("login");
     const store = authStore();
+    const router = useRouter();
 
     const submitForm = () => {
       formisvalid.value = true;
@@ -62,6 +64,7 @@ export default {
       } else {
         store.signup(username.value, password.value);
       }
+      router.replace('/profile')
       username.value = "";
       password.value = "";
     };

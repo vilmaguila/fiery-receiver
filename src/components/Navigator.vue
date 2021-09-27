@@ -30,9 +30,12 @@
 <script>
 import { computed } from "vue";
 import { authStore } from "../stores/auth";
+import { useRouter } from "vue-router";
+
 export default {
   setup() {
     const store = authStore();
+    const router = useRouter();
 
     const isLoggedIn = computed(() => {
       return store.isAuthenticated;
@@ -40,10 +43,12 @@ export default {
 
     const logout = () => {
       store.logout();
+      router.replace("/");
     };
 
     return {
       store,
+      router,
       isLoggedIn,
       logout,
     };
