@@ -17,6 +17,13 @@
     <router-link v-else class="bg-gray-400 p-2 rounded-lg" to="/profile">
       PROFILE
     </router-link>
+    <button
+      v-if="isLoggedIn"
+      class="hover:bg-gray-500 p-2 rounded-lg"
+      @click="logout()"
+    >
+      Logout
+    </button>
   </div>
 </template>
 
@@ -31,9 +38,14 @@ export default {
       return store.isAuthenticated;
     });
 
+    const logout = () => {
+      store.logout();
+    };
+
     return {
       store,
       isLoggedIn,
+      logout,
     };
   },
 };

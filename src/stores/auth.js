@@ -70,5 +70,8 @@ export const authStore = defineStore("auth", {
         (state.userId = responseData.user), (state.token = responseData.jwt);
       });
     },
+    async logout() {
+      this.$reset();
+    },
   },
 });
