@@ -19,10 +19,10 @@ export const routes = [
   },
   {
     path: "/track",
-    meta: { title: "Track" },
+    meta: { title: "Track", requiresAuth: true },
     component: Track,
   },
-  { path: "/auth", meta: { title: "Authentication" }, component: Auth },
-  { path: "/profile", meta: { title: "Profile" }, component: Profile },
+  { path: "/auth", meta: { title: "Authentication", requiresUnauth: true }, component: Auth },
+  { path: "/profile", meta: { title: "Profile", requiresAuth: true }, component: Profile },
   { path: "/:path(.*)", component: NotFound },
 ];
