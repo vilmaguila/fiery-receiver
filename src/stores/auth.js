@@ -17,8 +17,6 @@ export const authStore = defineStore("auth", {
       return !!state.token;
     },
   },
-  // could also be defined as
-  // state: () => ({ count: 0 })
   actions: {
     async signup(username, password) {
       const response = await fetch(

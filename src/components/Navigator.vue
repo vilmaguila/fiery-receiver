@@ -4,7 +4,7 @@
     <router-link class="bg-gray-400 p-2 rounded-lg" to="/about">
       ABOUT</router-link
     >
-    <router-link class="bg-gray-400 p-2 rounded-lg" to="/track">
+    <router-link v-show="isLoggedIn" class="bg-gray-400 p-2 rounded-lg" to="/track">
       TRACK
     </router-link>
     <router-link

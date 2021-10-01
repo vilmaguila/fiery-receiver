@@ -37,7 +37,7 @@
 <script>
 import { ref, computed } from "vue";
 import { authStore } from "@/stores/auth";
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 export default {
   setup() {
@@ -64,6 +64,7 @@ export default {
       } else {
         store.signup(username.value, password.value);
       }
+      // const redirectUrl = '/' + (router.query.redirect || 'profile')
       router.replace('/profile')
       username.value = "";
       password.value = "";
@@ -108,6 +109,7 @@ export default {
       changeModeButtonCaption,
       isLoggedIn,
       store,
+      router
     };
   },
 };
