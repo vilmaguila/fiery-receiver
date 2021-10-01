@@ -37,7 +37,7 @@
 <script>
 import { ref, computed } from "vue";
 import { authStore } from "@/stores/auth";
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router";
 
 export default {
   setup() {
@@ -59,13 +59,19 @@ export default {
         return;
       }
 
+      const authPayload = {
+        email: username.value,
+        password: password.value
+      };
+
       if (mode.value === "login") {
-        store.login(username.value, password.value);
+        store.login(authPayload);
       } else {
-        store.signup(username.value, password.value);
+        store.signup(authPayload);
       }
       // const redirectUrl = '/' + (router.query.redirect || 'profile')
-      router.replace('/profile')
+      router.replace("/profile");
+
       username.value = "";
       password.value = "";
     };
@@ -109,7 +115,7 @@ export default {
       changeModeButtonCaption,
       isLoggedIn,
       store,
-      router
+      router,
     };
   },
 };
