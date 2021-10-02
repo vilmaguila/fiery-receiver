@@ -55,11 +55,27 @@ export const authStore = defineStore("auth", {
         );
         throw error;
       }
+
+      localStorage.setItem("token", responseData.jwt);
+      localStorage.setItem("userId", responseData.user);
+
       this.$patch((state) => {
         (state.userId = responseData.user), (state.token = responseData.jwt);
       });
     },
-    async logout() {
+    autoLogin() {
+      const token = localStorage.getItem("token");
+      const userId = localStorage.getItem("userId");
+
+      if (token && userId) {
+        this.$patch((state) => {
+          (state.userId = userId), (state.token = token);
+        });
+      }
+    },
+    logout() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("userId");
       this.$reset();
     },
   },

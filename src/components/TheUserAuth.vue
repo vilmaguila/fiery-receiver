@@ -70,7 +70,7 @@ export default {
         store.signup(authPayload);
       }
       // const redirectUrl = '/' + (router.query.redirect || 'profile')
-      router.replace("/profile");
+      router.replace("/about");
 
       username.value = "";
       password.value = "";
