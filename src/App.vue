@@ -1,12 +1,16 @@
 <script setup>
-import { ref } from 'vue'
-import Navigator from './components/Navigator.vue'
+import { ref } from "vue";
+import Navigator from "./components/Navigator.vue";
+import { authStore } from "@/stores/auth";
 
-let counter = ref(0)
+const store = authStore();
+let counter = ref(0);
 
 setInterval(() => {
-  counter.value++
-}, 1000)
+  counter.value++;
+}, 1000);
+
+store.autoLogin();
 </script>
 
 <template>

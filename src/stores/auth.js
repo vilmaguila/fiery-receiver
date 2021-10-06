@@ -17,42 +17,32 @@ export const authStore = defineStore("auth", {
       return !!state.token;
     },
   },
-  // could also be defined as
-  // state: () => ({ count: 0 })
   actions: {
-    async signup(username, password) {
-      const response = await fetch(
-        "http://localhost:1337/auth/local/register",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            username: username,
-            email: username,
-            password: password,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const responseData = await response.json();
-
-      if (!response.ok) {
-        const error = new Error(responseData.message || "Failed to sign up");
-        throw error;
-      }
-      console.log(responseData);
-      this.$patch((state) => {
-        (state.userId = responseData.user), (state.token = responseData.jwt);
-      });
+    async signup(payload) {
+      this.auth({ ...payload, mode: "signup" });
     },
-    async login(username, password) {
-      const response = await fetch("http://localhost:1337/auth/local", {
+    async login(payload) {
+      this.auth({ ...payload, mode: "login" });
+    },
+    async auth(payload) {
+      const mode = payload.mode;
+      let url = "http://localhost:1337/auth/local";
+      let credentials = {
+        identifier: payload.email,
+        password: payload.password,
+      };
+
+      if (mode === "signup") {
+        url = "http://localhost:1337/auth/local/register";
+        credentials = {
+          username: payload.email,
+          email: payload.email,
+          password: payload.password,
+        };
+      }
+      const response = await fetch(url, {
         method: "POST",
-        body: JSON.stringify({
-          identifier: username,
-          password: password,
-        }),
+        body: JSON.stringify(credentials),
         headers: {
           "Content-Type": "application/json",
         },
@@ -65,12 +55,27 @@ export const authStore = defineStore("auth", {
         );
         throw error;
       }
-      console.log(responseData);
+
+      localStorage.setItem("token", responseData.jwt);
+      localStorage.setItem("userId", responseData.user);
+
       this.$patch((state) => {
         (state.userId = responseData.user), (state.token = responseData.jwt);
       });
     },
-    async logout() {
+    autoLogin() {
+      const token = localStorage.getItem("token");
+      const userId = localStorage.getItem("userId");
+
+      if (token && userId) {
+        this.$patch((state) => {
+          (state.userId = userId), (state.token = token);
+        });
+      }
+    },
+    logout() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("userId");
       this.$reset();
     },
   },
