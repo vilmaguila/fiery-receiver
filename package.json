@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "pinia": "next",
-    "postcss": "^8.3.6",
+    "postcss": "^8.4.11",
     "vue": "^3.2.9",
     "vue-router": "^4.0.11"
   },
