@@ -132,14 +132,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/forms@npm:^0.3.3":
-  version: 0.3.3
-  resolution: "@tailwindcss/forms@npm:0.3.3"
+"@tailwindcss/forms@npm:^0.5.3":
+  version: 0.5.3
+  resolution: "@tailwindcss/forms@npm:0.5.3"
   dependencies:
     mini-svg-data-uri: ^1.2.3
   peerDependencies:
-    tailwindcss: ">=2.0.0"
-  checksum: 6618988aae3b4d536d18a3ca6bde482024c1e0b5350549d6b530c699688b2f3e56356744e639ba4dff96d3331fc4a46c3a2d6ef6b4a3391afc5d861ffdb3c20a
+    tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
+  checksum: 9eddb4dbd06d01b1068138ff52a54ed0e35a28e7bfd3c72e226fc28658ecd92a9c078c4abe9c83db090984672040644d7ae2e035933fb619dd703df1d87aa275
   languageName: node
   linkType: hard
 
@@ -2457,7 +2457,7 @@ resolve@^1.20.0:
     "@headlessui/vue": ^1.4.1
     "@heroicons/vue": ^1.0.4
     "@tailwindcss/aspect-ratio": ^0.2.1
-    "@tailwindcss/forms": ^0.3.3
+    "@tailwindcss/forms": ^0.5.3
     "@tailwindcss/line-clamp": ^0.2.1
     "@tailwindcss/typography": ^0.4.1
     "@types/tailwindcss": ^2.2.1
