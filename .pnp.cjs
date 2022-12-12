@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tailwindcss/line-clamp", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:0.2.1"],
             ["@tailwindcss/typography", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:0.4.1"],
             ["@types/tailwindcss", "npm:2.2.1"],
-            ["@vitejs/plugin-vue", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:1.6.1"],
+            ["@vitejs/plugin-vue", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:4.0.0"],
             ["@vue/compiler-sfc", "npm:3.2.9"],
             ["autoprefixer", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:10.3.4"],
             ["pinia", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.0.0-rc.9"],
@@ -343,23 +343,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@vitejs/plugin-vue", [
-        ["npm:1.6.1", {
-          "packageLocation": "./.yarn/cache/@vitejs-plugin-vue-npm-1.6.1-01bda0c589-73997d619d.zip/node_modules/@vitejs/plugin-vue/",
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/@vitejs-plugin-vue-npm-4.0.0-028e1c0d6d-5a53414912.zip/node_modules/@vitejs/plugin-vue/",
           "packageDependencies": [
-            ["@vitejs/plugin-vue", "npm:1.6.1"]
+            ["@vitejs/plugin-vue", "npm:4.0.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:1.6.1", {
-          "packageLocation": "./.yarn/__virtual__/@vitejs-plugin-vue-virtual-20c3fe2560/0/cache/@vitejs-plugin-vue-npm-1.6.1-01bda0c589-73997d619d.zip/node_modules/@vitejs/plugin-vue/",
+        ["virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:4.0.0", {
+          "packageLocation": "./.yarn/__virtual__/@vitejs-plugin-vue-virtual-329017e56e/0/cache/@vitejs-plugin-vue-npm-4.0.0-028e1c0d6d-5a53414912.zip/node_modules/@vitejs/plugin-vue/",
           "packageDependencies": [
-            ["@vitejs/plugin-vue", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:1.6.1"],
-            ["@types/vue__compiler-sfc", null],
-            ["@vue/compiler-sfc", "npm:3.2.9"]
+            ["@vitejs/plugin-vue", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:4.0.0"],
+            ["@types/vite", null],
+            ["@types/vue", null],
+            ["vite", "npm:2.5.3"],
+            ["vue", "npm:3.2.9"]
           ],
           "packagePeers": [
-            "@types/vue__compiler-sfc",
-            "@vue/compiler-sfc"
+            "@types/vite",
+            "@types/vue",
+            "vite",
+            "vue"
           ],
           "linkType": "HARD",
         }]
@@ -3263,7 +3267,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tailwindcss/line-clamp", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:0.2.1"],
             ["@tailwindcss/typography", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:0.4.1"],
             ["@types/tailwindcss", "npm:2.2.1"],
-            ["@vitejs/plugin-vue", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:1.6.1"],
+            ["@vitejs/plugin-vue", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:4.0.0"],
             ["@vue/compiler-sfc", "npm:3.2.9"],
             ["autoprefixer", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:10.3.4"],
             ["pinia", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.0.0-rc.9"],

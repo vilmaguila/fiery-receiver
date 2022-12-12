@@ -194,12 +194,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:^1.6.0":
-  version: 1.6.1
-  resolution: "@vitejs/plugin-vue@npm:1.6.1"
+"@vitejs/plugin-vue@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@vitejs/plugin-vue@npm:4.0.0"
   peerDependencies:
-    "@vue/compiler-sfc": ^3.2.6
-  checksum: 73997d619d8d334d64ec7a2d99920f4c58c3d101cba6a434afd6d433225fb136de7f7ff9b880ac671d8be337550959717766e730a197847106be79f5147ac229
+    vite: ^4.0.0
+    vue: ^3.2.25
+  checksum: 5a53414912db644ca7a663d87c8d4838841dbf794772105c9b3bc3fb10214fc86c2f1f1a47350f264370e9a5fd2475f3b6882778b2440b5085d3fe7550ced542
   languageName: node
   linkType: hard
 
@@ -2461,7 +2462,7 @@ resolve@^1.20.0:
     "@tailwindcss/line-clamp": ^0.2.1
     "@tailwindcss/typography": ^0.4.1
     "@types/tailwindcss": ^2.2.1
-    "@vitejs/plugin-vue": ^1.6.0
+    "@vitejs/plugin-vue": ^4.0.0
     "@vue/compiler-sfc": ^3.2.9
     autoprefixer: ^10.3.4
     pinia: next
