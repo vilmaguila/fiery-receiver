@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vue/compiler-sfc", "npm:3.2.9"],
             ["autoprefixer", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:10.3.4"],
             ["pinia", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.0.0-rc.9"],
-            ["postcss", "npm:8.3.6"],
+            ["postcss", "npm:8.4.20"],
             ["tailwindcss", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.2.9"],
             ["vite", "npm:2.5.3"],
             ["vue", "npm:3.2.9"],
@@ -663,7 +663,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:1.3.0"],
             ["fraction.js", "npm:4.1.1"],
             ["normalize-range", "npm:0.1.2"],
-            ["postcss", "npm:8.3.6"],
+            ["postcss", "npm:8.4.20"],
             ["postcss-value-parser", "npm:4.1.0"]
           ],
           "packagePeers": [
@@ -2265,6 +2265,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nanoid", "npm:3.1.25"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:3.3.4", {
+          "packageLocation": "./.yarn/cache/nanoid-npm-3.3.4-3d250377d6-2fddd6dee9.zip/node_modules/nanoid/",
+          "packageDependencies": [
+            ["nanoid", "npm:3.3.4"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["node-emoji", [
@@ -2443,6 +2450,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["picocolors", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/picocolors-npm-1.0.0-d81e0b1927-a2e8092dd8.zip/node_modules/picocolors/",
+          "packageDependencies": [
+            ["picocolors", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["picomatch", [
         ["npm:2.3.0", {
           "packageLocation": "./.yarn/cache/picomatch-npm-2.3.0-5e60e6c82d-16818720ea.zip/node_modules/picomatch/",
@@ -2492,6 +2508,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:1.3.0"],
             ["nanoid", "npm:3.1.25"],
             ["source-map-js", "npm:0.6.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:8.4.20", {
+          "packageLocation": "./.yarn/cache/postcss-npm-8.4.20-b87cd5ecc8-1a5609ea1c.zip/node_modules/postcss/",
+          "packageDependencies": [
+            ["postcss", "npm:8.4.20"],
+            ["nanoid", "npm:3.3.4"],
+            ["picocolors", "npm:1.0.0"],
+            ["source-map-js", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -2668,7 +2694,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-nested", "virtual:7e22436f5e6b76e09b6b8f05a0836b3b0ecf54fa0bc98b4318f171ed57443b7350664b92dcaa623e15752a710d22db6a906720405549c08cd98780e95a310fb3#npm:5.0.6"],
             ["@types/postcss", null],
-            ["postcss", "npm:8.3.6"],
+            ["postcss", "npm:8.4.20"],
             ["postcss-selector-parser", "npm:6.0.6"]
           ],
           "packagePeers": [
@@ -3001,6 +3027,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["source-map-js", "npm:0.6.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/source-map-js-npm-1.0.2-ee4f9f9b30-c049a7fc4d.zip/node_modules/source-map-js/",
+          "packageDependencies": [
+            ["source-map-js", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["sourcemap-codec", [
@@ -3133,7 +3166,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-emoji", "npm:1.11.0"],
             ["normalize-path", "npm:3.0.0"],
             ["object-hash", "npm:2.2.0"],
-            ["postcss", "npm:8.3.6"],
+            ["postcss", "npm:8.4.20"],
             ["postcss-js", "npm:3.0.3"],
             ["postcss-load-config", "virtual:7e22436f5e6b76e09b6b8f05a0836b3b0ecf54fa0bc98b4318f171ed57443b7350664b92dcaa623e15752a710d22db6a906720405549c08cd98780e95a310fb3#npm:3.1.0"],
             ["postcss-nested", "virtual:7e22436f5e6b76e09b6b8f05a0836b3b0ecf54fa0bc98b4318f171ed57443b7350664b92dcaa623e15752a710d22db6a906720405549c08cd98780e95a310fb3#npm:5.0.6"],
@@ -3267,7 +3300,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vue/compiler-sfc", "npm:3.2.9"],
             ["autoprefixer", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:10.3.4"],
             ["pinia", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.0.0-rc.9"],
-            ["postcss", "npm:8.3.6"],
+            ["postcss", "npm:8.4.20"],
             ["tailwindcss", "virtual:df8a186b6e9926f725dfc9ffdc08e7ea940ead875385fd68abc4ba865886d97c2c1c0206dea270fd8056a1a1ccb270146733d2571bb457d33cc400654f677544#npm:2.2.9"],
             ["vite", "npm:2.5.3"],
             ["vue", "npm:3.2.9"],
